@@ -1,0 +1,23 @@
+
+{% extends "layouts.html" %}
+    {% block content %}
+    <div class="">
+        <h3><i>Trending...</i></h3>
+
+        <ul class= "list-group">
+            {% for popularMovie in popularMovies %}
+            <li class="list-group">
+                <a href="#" class="list-group-item list-group-item-action ">
+                    {{ popularMovie }}
+                </a>
+            </li>
+            {% endfor %}
+        </ul>
+        <br>
+        <p>Want Content-Based recommendations on your content? <a href="{{ url_for('contentSearch')}}" class="">Click here</a></p>
+        <p>Want Collaborative-Based recommendations on your content? <a href="{{ url_for('collaborativeSearch')}}" class="">Click here</a></p>
+    </div>
+
+{% endblock content %}
+
+
