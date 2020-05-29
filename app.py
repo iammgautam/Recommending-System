@@ -64,7 +64,6 @@ def login():
     if form.validate_on_submit():
         if form.email.data == 'admin@admin.com' and form.password.data == 'password':
             return redirect(url_for('home'))
-        else:
             
     return render_template('login.html', title='Login', form=form)
 
